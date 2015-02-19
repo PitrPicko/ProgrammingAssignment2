@@ -24,7 +24,10 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         inv<-x$getinv()  #gets inverse of x if it is stored in (mCM), NULL otherwise
         if(!is.null(inv)){  #if inverse is computed
-                message("getting cached")
+        
+        #for testing I recomend to comment following line
+                message("getting cached")  
+        #################################################        
                 return(inv)  #return computed inverse and breaks
         }
         data<-x$get  
