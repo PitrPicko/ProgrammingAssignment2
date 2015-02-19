@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
         #################################################        
                 return(inv)  #return computed inverse and breaks
         }
-        data<-x$get  
+        data<-x$get()  
         inv<-solve(data,...)  #compute inverse
         
         x$setinv(inv)  #store inverse into (mCM)
