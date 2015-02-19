@@ -1,11 +1,10 @@
-## Put comments here that give an overall description of what your functions do
-
+#Summary (will be repeated at the begging of functions)
 ##makeCacheMatrix (mCM) creates special type of variable (list) that is capable of capturing own value as well as its inverse
 ##cacheSolver is function that checks whether inverse is already computed.
         ## IF YES --> prints computed value
         ## IF NO  --> calculates inverse, and assign it in (mCM)-inverse list
 
-## Write a short comment describing this function
+##makeCacheMatrix (mCM) creates special type of variable (list) that is capable of capturing own value as well as its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL # when creating new (mCM) inverse is not computed yet
@@ -20,7 +19,10 @@ makeCacheMatrix <- function(x = matrix()) {
                 setinv = setinv,
                 getinv = getinv)
 }
-## Write a short comment describing this function
+
+##cacheSolver is function that checks whether inverse is already computed.
+        ## IF YES --> prints computed value
+        ## IF NO  --> calculates inverse, and assign it in (mCM)-inverse list
 cacheSolve <- function(x, ...) {
         inv<-x$getinv()  #gets inverse of x if it is stored in (mCM), NULL otherwise
         if(!is.null(inv)){  #if inverse is computed
